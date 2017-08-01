@@ -15,3 +15,5 @@ How to use it:
 
 Active link:
 https://mavnyin88.github.io/storyboard/
+
+Idea: Jurgen Koch https://vimeo.com/youragain
