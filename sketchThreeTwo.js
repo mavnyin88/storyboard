@@ -1,6 +1,16 @@
-function setup(){
+var cnv;
 
-createCanvas(793,612);
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function setup(){
+cnv = createCanvas(793,612);
+var x = (windowWidth - width) / 2;
+var y = (windowHeight - height) / 2;
+cnv.position(x, y);
 background(255,255,255);
 
 fill(255,255,255);
@@ -60,3 +70,7 @@ line(542,253,792,253);
 line(542,273,792,273);
 
 } // end setup
+
+function windowResized() {
+  centerCanvas();
+} // end windowResize

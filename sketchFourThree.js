@@ -1,7 +1,17 @@
-function setup(){
+var cnv;
 
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+}
+
+function setup(){
 var margin2 = 3;
-createCanvas(793,612);
+cnv = createCanvas(793,612);
+var x = (windowWidth - width) / 2;
+var y = (windowHeight - height) / 2;
+cnv.position(x, y);
 background(255,255,255);
 
 var array = [0,204,408,612];
@@ -37,3 +47,7 @@ var array432 = [506,526,546,566,586];
     }
 
 } // end setup
+
+function windowResized() {
+  centerCanvas();
+} // end windowResize
