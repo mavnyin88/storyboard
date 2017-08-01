@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  html, body {
+    height: 100%;
+    font-family:Helvetica,sans-serif;
+    font-weight:light;
+  }
+  body {
+    margin: 0;
+    display: flex;
+
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+
+    /* This centers our sketch vertically. */
+    align-items: center;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-weight:lighter;
+  }
+  #choose{
+    width:320px;
+    height:auto;
+    box-sizing: border-box;
+  }
+  .choice{
+    width:inherit;
+    height:100px;
+    background-color:#eff;
+    position:relative;
+    overflow: hidden;
+    cursor:pointer;
+  }
+  .choice h1{
+    padding:20px;
+    margin:0;
+  }
+  #four-two{
+    background-color:#eee;
+  }
+  #four-three{
+    background-color: #eef;
+  }
+  #three-two{
+    background-color: #ffe;
+  }
+  .grid-preview-wrapper{
+    z-index: 10;
+    position:absolute;
+    right:-300px;
+    opacity:0;
+    top:20px;
+    width:230px;
+    margin-left:7.5px;
+    transition:0.23s all ease-in;
+  }
+  .grid-preview-wrapper div{
+    width:50px;
+    height:25px;
+    float:left;
+    margin-bottom:7.5px;
+    margin-right:7.5px;
+    background-color:#191919;
+  }
+  .clear{
+    clear:left;
+  }
+  #four-three .grid-preview-wrapper{
+    top:13px;
+  }
+  #four-three .grid-preview-wrapper div{
+    width:40px;
+    height:20px;
+    float:left;
+    margin-bottom:7.5px;
+    margin-right:7.5px;
+    background-color:#191919;
+  }
+  #four-two:hover .grid-preview-wrapper, #four-three:hover .grid-preview-wrapper, #three-two:hover .grid-preview-wrapper{
+    right:10px;
+    opacity:1;
+  }
+  a{
+    text-decoration:none;
+    color:#191919;
+  }
+
+  </style>
+</head>
+<body>
+<section id="choose">
+    <h1 style="margin-bottom:5px;padding:0;">Choose your grid</h1>
+    <a href="fourTwo.html">
+      <div class="choice" id="four-two">
+      <h1>4-2</h1>
+      <div class="clear"></div>
+      <div class="grid-preview-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    </a>
+    <a href="fourThree.html">
+      <div class="choice" id="four-three">
+      <h1>4-3</h1>
+      <div class="grid-preview-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    </a>
+    <a href="threeTwo.html">
+      <div class="choice" id="three-two">
+      <h1>3-2</h1>
+      <div class="grid-preview-wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div style="background-color:transparent"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div style="background-color:transparent"></div>
+      </div>
+    </div>
+    </a>
+  </section>
+<script src="../p5.min.js"></script>
+<script src="../p5.dom.min.js"></script>
+<!-- <script src="sketch.js"></script> -->
+
+</body>
+</html>
